@@ -27,7 +27,7 @@ namespace Models
 			}
 
 		// Método com a Quantidade de Filmes locados
-		public int QtdeFimesLocCliente() 
+		public int QtdeFilmesLocCliente() 
 			{
 				return locacoes.Count;
 			}

@@ -45,8 +45,8 @@ namespace Models
                 $"-> DATA DE LANÇAMENTO: {dataLanc}\n" + 
                 $"-> SINOPSE: {sinopse}\n" + 
                 $"-> VALOR DA LOCAÇÃO: R$ {valorLoc}\n" + 
-                $"-> QTDE EM ESTOQUE: \n" + 
-                $"-> QTDE DE LOCAÇÕES REALIZADAS: \n" + 
+                $"-> QTDE EM ESTOQUE: {estoque}\n" + 
+                $"-> QTDE DE LOCAÇÕES REALIZADAS: {locado}\n" + 
                 $"-------------------------------------------------------------------------------------------------------------------------------------------";
         }
         public static List<Filme> GetFilmes()
