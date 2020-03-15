@@ -12,7 +12,7 @@ namespace View
                 ClienteController.addCliente(idCliente, nome, dataNasc, cpf, diaDev);
             }
 
-        public void getCliente(Cliente cliente)
+        public void getCliente(ClienteModels cliente)
             {
                 Console.Write(cliente);
             }

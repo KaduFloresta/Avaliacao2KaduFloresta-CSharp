@@ -11,7 +11,7 @@ namespace View
                 FilmeController.addFilme(idFilme, titulo, dataLanc, sinopse, valorLoc, estoque);
             }
 
-        public void getFilme(Filme filmes)
+        public void getFilme(FilmeModels filmes)
             {
                 Console.Write(filmes);
             }
