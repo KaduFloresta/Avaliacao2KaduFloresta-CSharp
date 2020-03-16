@@ -3,7 +3,6 @@ using System.Collections.Generic;
 
 namespace Models 
 {
-
 	public class ClienteModels 
 	{
 		// Atributos

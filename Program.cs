@@ -21,15 +21,15 @@ namespace ViewLocadora
 		int menu = 0;
 		do 
 		{ 
-            Console.WriteLine("\n|********************************|");			  
-              Console.WriteLine("|=============MENU===============|");
-			  Console.WriteLine("|********************************|"); 
-              Console.WriteLine("| 1 >>> Inserir Locação          |");
-              Console.WriteLine("| 2 >>> Listar Clientes          |");
-			  Console.WriteLine("| 3 >>> Listar Filmes            |");
+            Console.WriteLine("\n|*********************************|");			  
+              Console.WriteLine("|==============MENU===============|");
+			  Console.WriteLine("|*********************************|"); 
+              Console.WriteLine("| 1 >>> Inserir Locação           |");
+              Console.WriteLine("| 2 >>> Listar Clientes           |");
+			  Console.WriteLine("| 3 >>> Listar Filmes             |");
 			  Console.WriteLine("| 4 >>> Listar Locações           |");
-              Console.WriteLine("|--------------------------------|");
-			  Console.WriteLine("|********************************|\n");
+              Console.WriteLine("|---------------------------------|");
+			  Console.WriteLine("|*********************************|\n");
 
 			//Entrada Menu
 			Console.WriteLine("\nDigite a Opção: ");
@@ -44,13 +44,13 @@ namespace ViewLocadora
 					ClienteView.GetClientes();
 					break;
 				case 3: //listar filmes
-					//FilmeView.GetFilmes();
+					FilmeView.GetFilmes();
 					break;
 				case 4: //lista locação
 					break;
 
 			}
-		} while (menu <= 5);
+		} while (menu <= 4);
 			
 		}
 	}

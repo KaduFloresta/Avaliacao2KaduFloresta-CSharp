@@ -16,7 +16,7 @@ namespace View
                 Console.Write(filmes);
             }
 
-        public static void GetClientes()
+        public static void GetFilmes()
             {
                FilmeController.GetFilmes().ForEach(filme => Console.WriteLine(filme));
             }        

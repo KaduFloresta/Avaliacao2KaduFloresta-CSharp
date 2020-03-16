@@ -10,6 +10,13 @@ namespace Controllers
                 new FilmeModels(idFilme, titulo, dataLanc, sinopse, valorLoc, estoque);
             }
 
+    public string GetFilme(FilmeModels filme)
+        {
+            string filmeValue = filme.ToString();
+
+            return filmeValue;
+        }
+
         public static List<FilmeModels> GetFilmes()
 			{
 				return FilmeModels.GetFilmes();

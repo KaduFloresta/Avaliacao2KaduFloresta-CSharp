@@ -38,15 +38,15 @@ namespace Models
     // Impressão Dados do Filme
     public override string ToString() 
         {
-        return  $"----------------------------FILME----------------------------------------------------------------------------------------------------------\n\n" +
-                $"--> Nº ID DO FILME: {IdFilme}\n" + 
-                $"-> TÍTULO: {Titulo}\n" + 
-                $"-> DATA DE LANÇAMENTO: {DataLancamento}\n" + 
-                $"-> SINOPSE: {Sinopse}\n" + 
-                $"-> VALOR DA LOCAÇÃO: R$ {ValorLocacaoFilme}\n" + 
-                $"-> QTDE EM ESTOQUEFilme: {EstoqueFilme}\n" + 
-                $"-> QTDE DE LOCAÇÕES REALIZADAS: {FilmeLocado}\n" + 
-                $"-------------------------------------------------------------------------------------------------------------------------------------------";
+            return  $"----------------------------FILME----------------------------------------------------------------------------------------------------------\n\n" +
+                    $"--> Nº ID DO FILME: {IdFilme}\n" + 
+                    $"-> TÍTULO: {Titulo}\n" + 
+                    $"-> DATA DE LANÇAMENTO: {DataLancamento}\n" + 
+                    $"-> SINOPSE: {Sinopse}\n" + 
+                    $"-> VALOR DA LOCAÇÃO: R$ {ValorLocacaoFilme}\n" + 
+                    $"-> QTDE EM ESTOQUEFilme: {EstoqueFilme}\n" + 
+                    $"-> QTDE DE LOCAÇÕES REALIZADAS: {FilmeLocado}\n" + 
+                    $"-------------------------------------------------------------------------------------------------------------------------------------------";
         }
         public static List<FilmeModels> GetFilmes()
 			{

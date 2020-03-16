@@ -29,8 +29,6 @@ namespace Repositories
 			ClienteModels cliente5 = new ClienteModels(5,
 			"Belmiro Schmmitt", "15/07/1995", "753.753.753-75", 3);
 			clientes.Add(cliente5);
-		}
-        
-        
+		}             
     }
 }
