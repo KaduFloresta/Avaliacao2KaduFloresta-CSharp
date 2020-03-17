@@ -1,54 +1,45 @@
 using System;
-using Models;
 using System.Collections.Generic;
-using System.Globalization;
-using System.Reflection;
+using Models;
 
+namespace Controllers 
+{
+    public class LocacaoController
+    {
+        public static LocacaoModels addLocacao(int idLocacao, ClienteModels cliente)
+            {
+                return new LocacaoModels(idLocacao, cliente);
+            }
 
-namespace NameLocacao {
+		// Método com o Valor Total das Locações (Preço)
+		public static double PrecoTotalLocaçoes(List<FilmeModels> filmes) 
+			{
+                double ValorTotal = 0;
 
-public class Locacao {
-	// Atributos
-	public int idLoc { get; set; }
-	public Cliente cliente { get; set; }
-	public String dataLoc { get; set; }
-	public String dataDevolucao { get; set; }
-	public Double valorTotal { get; set; }
+				foreach (FilmeModels filme in filmes) 
+					{
+						ValorTotal += filme.ValorLocacaoFilme;
+					}
 
-	public List<Filme> filmes = new List<Filme>();
-	// Construtor
-	public Locacao(int idLoc, Cliente cliente) {
+                return ValorTotal;
+			}
 
-		this.idLoc = idLoc;
-		this.cliente = cliente;
-
-		this.cliente.adicionarLocacao(this);
-	}
-
-	// Adição de Filmes
-	public void AdicFilme(Filme filme) {
-		this.filmes.Add(filme);
-	}
-
-	// Método com o Valor Total das Locações (Preço)
-	public double PrecoTotal() {
-		double total = 0;
-		foreach (Filme filme in filmes) {
-			total += filme.valorLoc;
+		// Calculo Data de Devolução
+		public static string calculoDataDevolucao(DateTime Data) 
+		{
+			//Data.AddDays(ClienteModels.Dias);
+			return Data.ToString().Substring(0,10);
 		}
-		return total;
-	}
 
-	// Método com a Quantidade de Filmes Locados
-	public int QtdeFilmesLoc() {
-		return this.filmes.Count;
-	}
+        public static double TotalFilmes(List<FilmeModels> filmes) 
+			{
+                return filmes.Count;
+			}
 
-	// Calculo Data de Devolução
-	public String calculoData() {
-		DateTime dataAtual = DateTime.Now;
+        public static List<LocacaoModels> GetLocacaoModels(){
+            return LocacaoModels.GetLocacaoModels();
+        }
 
-		return dataAtual.AddDays(cliente.diaDev).ToString("dddd, dd MMMM yyyy");
-	}
-}
+		
+    }      
 }

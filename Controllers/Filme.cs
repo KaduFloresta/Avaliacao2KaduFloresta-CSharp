@@ -7,12 +7,19 @@ namespace Controllers
     {
         public static void addFilme(int idFilme, string titulo, string dataLanc, string sinopse, double valorLoc, int estoque)  
             {
-                new Filme(idFilme, titulo, dataLanc, sinopse, valorLoc, estoque);
+                new FilmeModels(idFilme, titulo, dataLanc, sinopse, valorLoc, estoque);
             }
 
-        public static List<Filme> GetFilmes()
+    public string GetFilme(FilmeModels filme)
+        {
+            string filmeValue = filme.ToString();
+
+            return filmeValue;
+        }
+
+        public static List<FilmeModels> GetFilmes()
 			{
-				return Filme.GetFilmes();
+				return FilmeModels.GetFilmes();
 			}
         
     }

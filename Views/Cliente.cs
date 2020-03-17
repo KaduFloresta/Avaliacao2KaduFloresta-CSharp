@@ -4,7 +4,6 @@ using Models;
 
 namespace View 
 {
-
 	public class ClienteView 
     {
         public void addCliente(int idCliente, string nome, string dataNasc, string cpf, int diaDev) 
@@ -12,7 +11,7 @@ namespace View
                 ClienteController.addCliente(idCliente, nome, dataNasc, cpf, diaDev);
             }
 
-        public void getCliente(Cliente cliente)
+        public void getCliente(ClienteModels cliente)
             {
                 Console.Write(cliente);
             }

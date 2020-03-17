@@ -1,56 +1,57 @@
 using System;
-using NameLocacao;
 using System.Collections.Generic;
+using Repositories;
 
 namespace Models 
 {
-
-	public class Cliente 
+	public class ClienteModels 
 	{
 		// Atributos
-		public int idCliente { get; set; }
-		public String nome { get; set; }
-		public String dataNasc { get; set; }
-		public String cpf { get; set; }
-		public int diaDev { get; set; }
-		public List<Locacao> locacoes = new List<Locacao>();
+		public int IdCliente { get; set; }
+		public String NomeCliente { get; set; }
+		public String DataNascimento { get; set; }
+		public String CpfCliente { get; set; }
+		public int DiasDevolucao { get; set; }
 
-		// Construtor
-		public Cliente(int idCliente, string nome, string dataNasc, string cpf, int diaDev) 
+		public List<LocacaoModels> locacoes = new List<LocacaoModels>();
+
+        // Construtor
+        public ClienteModels(int idCliente, string nomeCliente, string dataNascimento, string cpfCliente, int diasDevolucao) 
 			{
-				// Atributos
-				this.idCliente = idCliente;
-				this.nome = nome;
-				this.dataNasc = dataNasc;
-				this.cpf = cpf;
-				this.diaDev = diaDev;
+				IdCliente = idCliente;
+				NomeCliente = nomeCliente;
+				DataNascimento = dataNascimento;
+				CpfCliente = cpfCliente;
+				DiasDevolucao = diasDevolucao;
+
+				ClienteRepositories.clientes.Add(this);
 			}
 
 		// Método com a Quantidade de Filmes locados
-		public int QtdeFilmesLocCliente() 
+		public int QtdeFilmesLocadosCliente() 
 			{
 				return locacoes.Count;
 			}
 
 		// Impressão Dados do CLiente
-		public override string ToString() {
-			return  $"----------------CLIENTE----------------\n" +
-					$"--> Nº ID DO CLIENTE: {idCliente}\n" +
-					$"-> NOME COMPLETO: {nome}\n" +
-					$"-> DATA DE NASCIMENTO: {dataNasc}\n" +
-					$"-> CPF: {cpf}\n" +
-					$"-> DIAS P/ DEVOLUÇÃO: {diaDev}\n";
-		}
+		public override string ToString() 
+			{
+				return  $"----------------CLIENTE----------------\n" +
+						$"--> Nº ID DO CLIENTE: {IdCliente}\n" +
+						$"-> NOMECliente COMPLETO: {NomeCliente}\n" +
+						$"-> DATA DE NASCIMENTO: {DataNascimento}\n" +
+						$"-> CPFCliente: {CpfCliente}\n" +
+						$"-> DIAS P/ DEVOLUÇÃO: {DiasDevolucao}\n";
+			}
 		// Adição de Locações
-		public void adicionarLocacao(Locacao locacao) 
+		public void AdicionarLocacao(LocacaoModels locacao) 
 			{
-				this.locacoes.Add(locacao);
+				locacoes.Add(locacao);
 			}
 
-		public static List<Cliente> GetClientes()
+		public static List<ClienteModels> GetClientes()
 			{
-				return Repositories.RepositoriesCliente.clientes;
+				return Repositories.ClienteRepositories.clientes;
 			}
-
 	}
 }
