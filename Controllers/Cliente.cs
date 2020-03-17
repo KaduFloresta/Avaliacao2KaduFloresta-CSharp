@@ -8,11 +8,11 @@ namespace Controllers
 	{
         public static void addCliente(int idCliente, string nome, string dataNasc, string cpf, int diaDev) 
 			{
-				new Cliente(idCliente, nome, dataNasc, cpf, diaDev);
+				new ClienteModels(idCliente, nome, dataNasc, cpf, diaDev);
 			}
 
         // Adição de Locações
-        public string getCliente(Cliente cliente) 
+        public string getCliente(ClienteModels cliente) 
 			{
 				string clienteValue = cliente.ToString();
 
@@ -23,13 +23,13 @@ namespace Controllers
 			}
         
 		// Lista de locações
-		public int getLocacoes(Cliente cliente) 
+		public int getLocacoes(ClienteModels cliente) 
 		{
 			int qtd = 0;
 
-			foreach (Locacao locacao in cliente.locacoes) 
+			foreach (LocacaoModels locacao in cliente.locacoes) 
 			{
-				foreach (Filme filme in locacao.filmes) 
+				foreach (FilmeModels filme in locacao.filmes) 
 				{
 					qtd++;
 				}
@@ -38,9 +38,9 @@ namespace Controllers
 			return qtd;
 		}
 
-        public static List<Cliente> GetClientes()
+        public static List<ClienteModels> GetClientes()
 			{
-				return Cliente.GetClientes();
+				return ClienteModels.GetClientes();
 			}
     }
 }
