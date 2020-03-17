@@ -17,8 +17,8 @@ namespace Models
 
     public List<LocacaoModels> locacaos = new List<LocacaoModels>();
 
-    // Construtor
-    public FilmeModels (int idFilme, string titulo, string dataLancamento, string sinopse, double valorLocacaoFilme, int estoqueFilme) 
+        // Construtor
+        public FilmeModels (int idFilme, string titulo, string dataLancamento, string sinopse, double valorLocacaoFilme, int estoqueFilme) 
         {
             IdFilme = idFilme;
             Titulo = titulo;
@@ -41,15 +41,15 @@ namespace Models
     // Impressão Dados do Filme
     public override string ToString() 
         {
-            return  $"----------------------------FILME----------------------------------------------------------------------------------------------------------\n\n" +
+            return  $"------------------------===[ FILME ]===-------------------------------------------------------------------------------------------------\n" +
                     $"--> Nº ID DO FILME: {IdFilme}\n" + 
                     $"-> TÍTULO: {Titulo}\n" + 
                     $"-> DATA DE LANÇAMENTO: {DataLancamento}\n" + 
                     $"-> SINOPSE: {Sinopse}\n" + 
-                    $"-> VALOR DA LOCAÇÃO: R$ {ValorLocacaoFilme}\n" + 
-                    $"-> QTDE EM ESTOQUEFilme: {EstoqueFilme}\n" + 
+                    $"-> VALOR DA LOCAÇÃO: {ValorLocacaoFilme.ToString("C")}\n" + 
+                    $"-> QTDE EM ESTOQUE: {EstoqueFilme}\n" + 
                     $"-> QTDE DE LOCAÇÕES REALIZADAS: {FilmeLocado}\n" + 
-                    $"-------------------------------------------------------------------------------------------------------------------------------------------";
+                    $"----------------------------------------------------------------------------------------------------------------------------------------";
         }
         public static List<FilmeModels> GetFilmes()
 			{

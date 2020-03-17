@@ -5,9 +5,9 @@ namespace Controllers
 {
     public class FilmeController
     {
-        public static void addFilme(int idFilme, string titulo, string dataLanc, string sinopse, double valorLoc, int estoque)  
+        public static void addFilme (int idFilme, string titulo, string dataLancamento, string sinopse, double valorLocacaoFilme, int estoqueFilme) 
             {
-                new FilmeModels(idFilme, titulo, dataLanc, sinopse, valorLoc, estoque);
+                new FilmeModels(idFilme, titulo, dataLancamento, sinopse, valorLocacaoFilme, estoqueFilme);
             }
 
     public string GetFilme(FilmeModels filme)
@@ -15,6 +15,8 @@ namespace Controllers
             string filmeValue = filme.ToString();
 
             return filmeValue;
+            
+            
         }
 
         public static List<FilmeModels> GetFilmes()

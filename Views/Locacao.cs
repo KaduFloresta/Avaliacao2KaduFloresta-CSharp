@@ -8,7 +8,11 @@ namespace View
     public class LocacaoView
     {
         public static void ImprimirLocacao()
-        {
+        {            
+            Console.WriteLine("\n------------------===[ Dados do Cliente ]===------------------");
+
+            Console.WriteLine("\n-------------------===[ Filmes Locados ]===-------------------");            
+
             List<LocacaoModels> locacoes = LocacaoController.GetLocacaoModels();
 
             locacoes.ForEach(locacao => Console.WriteLine(locacao));
@@ -19,7 +23,7 @@ namespace View
             List<ClienteModels> clientes = ClienteController.GetClientes();
             List<FilmeModels> filmes = FilmeController.GetFilmes();
 
-            Console.WriteLine("Digite o ID Cliente:");
+            Console.WriteLine("\nDigite o ID Cliente:");
             int idCliente = Convert.ToInt32(Console.ReadLine());
 
             ClienteModels cliente = clientes.Find(cliente => cliente.IdCliente == idCliente);
@@ -29,8 +33,8 @@ namespace View
             int idFilme = 0;
             do
             {
-                Console.WriteLine("Digite o ID Filme: ");
-                Console.WriteLine("Digite ZERO p/ SAIR");
+                Console.WriteLine("\nDigite o ID Filme: ");
+                Console.WriteLine("DIGITE ZERO P/ SAIR!");
                 idFilme = Convert.ToInt32(Console.ReadLine());
 
                 if(idFilme != 0)

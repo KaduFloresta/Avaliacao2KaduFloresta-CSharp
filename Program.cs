@@ -52,7 +52,6 @@ namespace ViewLocadora
 				case 4: // Lista Locação
 					LocacaoView.ImprimirLocacao();
 					break;
-
 			}
 		} while (menu <= 4);
 			

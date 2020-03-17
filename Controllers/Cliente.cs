@@ -6,9 +6,9 @@ namespace Controllers
 
 	public class ClienteController 
 	{
-        public static void addCliente(int idCliente, string nome, string dataNasc, string cpf, int diaDev) 
+        public static void addCliente(int idCliente, string nomeCliente, string dataNascimento, string cpfCliente, int diasDevolucao) 
 			{
-				new ClienteModels(idCliente, nome, dataNasc, cpf, diaDev);
+				new ClienteModels(idCliente, nomeCliente, dataNascimento, cpfCliente, diasDevolucao);
 			}
 
         // Adição de Locações

@@ -36,12 +36,13 @@ namespace Models
 		// Impressão Dados do CLiente
 		public override string ToString() 
 			{
-				return  $"----------------CLIENTE----------------\n" +
+				return  $"-------------------===[ CLIENTE ]===-------------------\n" +
 						$"--> Nº ID DO CLIENTE: {IdCliente}\n" +
-						$"-> NOMECliente COMPLETO: {NomeCliente}\n" +
+						$"-> NOME COMPLETO: {NomeCliente}\n" +
 						$"-> DATA DE NASCIMENTO: {DataNascimento}\n" +
-						$"-> CPFCliente: {CpfCliente}\n" +
-						$"-> DIAS P/ DEVOLUÇÃO: {DiasDevolucao}\n";
+						$"-> CPF: {CpfCliente}\n" +
+						$"-> DIAS P/ DEVOLUÇÃO: {DiasDevolucao}\n" +
+						$"--------------------------------------------------------";
 			}
 		// Adição de Locações
 		public void AdicionarLocacao(LocacaoModels locacao) 
