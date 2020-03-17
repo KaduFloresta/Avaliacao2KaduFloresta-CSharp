@@ -53,6 +53,5 @@ namespace Models
 			{
 				return Repositories.ClienteRepositories.clientes;
 			}
-
 	}
 }

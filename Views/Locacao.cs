@@ -19,7 +19,7 @@ namespace View
             List<ClienteModels> clientes = ClienteController.GetClientes();
             List<FilmeModels> filmes = FilmeController.GetFilmes();
 
-            Console.WriteLine("Digite o id Cliente:");
+            Console.WriteLine("Digite o ID Cliente:");
             int idCliente = Convert.ToInt32(Console.ReadLine());
 
             ClienteModels cliente = clientes.Find(cliente => cliente.IdCliente == idCliente);
@@ -27,17 +27,19 @@ namespace View
             LocacaoModels locacao = LocacaoController.addLocacao(1, cliente);
 
             int idFilme = 0;
-            do{
-                Console.WriteLine("Digite o id Filme: (Digite zero (0) para sair)");
+            do
+            {
+                Console.WriteLine("Digite o ID Filme: ");
+                Console.WriteLine("Digite ZERO p/ SAIR");
                 idFilme = Convert.ToInt32(Console.ReadLine());
 
-                if(idFilme != 0){
+                if(idFilme != 0)
+                {
                     FilmeModels filme = filmes.Find(filme => filme.IdFilme == idFilme);
 
                     locacao.AdicionarFilme(filme);
                 }
-            } while(idFilme != 0);           
-            
+            } while(idFilme != 0);                    
         }
     }
 }

@@ -19,7 +19,7 @@ namespace ViewLocadora
 
 		Console.WriteLine("LOCADORA DE FILMES MVC");
 
-		// IdCliente / Menu
+		// Menu Principal
 		int menu = 0;
 		do 
 		{ 
@@ -40,16 +40,16 @@ namespace ViewLocadora
 
 			switch (menu)
 			{
-				case 1: //adicionar locacao
+				case 1: // Adicionar Locacao
 					LocacaoView.AdicionarLocacao();
 					break;
-				case 2: //listar clientes
+				case 2: // Listar Clientes
 					ClienteView.GetClientes();
 					break;
-				case 3: //listar filmes
+				case 3: // Listar Filmes
 					FilmeView.GetFilmes();
 					break;
-				case 4: //lista locação
+				case 4: // Lista Locação
 					LocacaoView.ImprimirLocacao();
 					break;
 
