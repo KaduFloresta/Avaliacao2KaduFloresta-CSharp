@@ -1,6 +1,6 @@
 using System;
-using Controllers;
 using Models;
+using Controllers;
 
 namespace View 
 {
@@ -21,5 +21,4 @@ namespace View
                 ClienteController.GetClientes().ForEach(cliente => Console.WriteLine(cliente));
             }
     }
-
 }

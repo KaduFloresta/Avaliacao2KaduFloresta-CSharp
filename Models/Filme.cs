@@ -41,7 +41,7 @@ namespace Models
     // Impressão Dados do Filme
     public override string ToString() 
         {
-            return  $"------------------------===[ FILME ]===-------------------------------------------------------------------------------------------------\n" +
+            return  $"\n------------------------===[ FILME ]===-------------------------------------------------------------------------------------------------" +
                     $"--> Nº ID DO FILME: {IdFilme}\n" + 
                     $"-> TÍTULO: {Titulo}\n" + 
                     $"-> DATA DE LANÇAMENTO: {DataLancamento}\n" + 

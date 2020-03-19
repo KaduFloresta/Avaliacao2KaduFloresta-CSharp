@@ -1,6 +1,6 @@
 using System;
-using System.Collections.Generic;
 using Repositories;
+using System.Collections.Generic;
 
 namespace Models 
 {
@@ -42,7 +42,7 @@ namespace Models
 						$"-> DATA DE NASCIMENTO: {DataNascimento}\n" +
 						$"-> CPF: {CpfCliente}\n" +
 						$"-> DIAS P/ DEVOLUÇÃO: {DiasDevolucao}\n" +
-						$"--------------------------------------------------------";
+						$"-------------------------------------------------------\n";
 			}
 		// Adição de Locações
 		public void AdicionarLocacao(LocacaoModels locacao) 

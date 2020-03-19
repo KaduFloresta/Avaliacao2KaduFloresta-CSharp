@@ -1,6 +1,6 @@
 using System;
-using Controllers;
 using Models;
+using Controllers;
 
 namespace View
 {

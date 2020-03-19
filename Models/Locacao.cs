@@ -32,11 +32,18 @@ namespace Models
 
 		public override string ToString() 
 		{
-			return  $"--------------------===[ DADOS LOCAÇÃO ]===--------------------\n" +
+			string retorno = $"----------------===[ DADOS LOCAÇÃO ]===----------------\n" +
+					Cliente +
 					$"-> PREÇO TOTAL DAS LOCAÇÕES: R$ {LocacaoController.PrecoTotalLocaçoes(filmes)}\n" +
 					$"-> DATA DE DEVOLUÇÃO: {LocacaoController.calculoDataDevolucao(DataLocacao)}\n" +
 					$"-> QTDE TOTAL DE FILMES LOCADOS: {LocacaoController.TotalFilmes(filmes)}\n" +
-					$"---------------------------------------------------------------\n";
+					$"-------------------------------------------------------\n";
+			foreach (FilmeModels filme in filmes)
+				{
+					retorno += filme;
+				}
+				return retorno;
+
 		}
 
 		public static List<LocacaoModels> GetLocacaoModels() {

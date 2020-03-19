@@ -33,7 +33,6 @@ namespace ViewLocadora
               Console.WriteLine("|---------------------------------|");
 			  Console.WriteLine("|*********************************|\n");
 
-			//Entrada Menu
 			Console.WriteLine("\nDigite a Opção: ");
             String Digito = Console.ReadLine();
 			menu = Convert.ToInt32(Digito);
