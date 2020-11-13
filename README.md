@@ -24,7 +24,6 @@
 
 ---
 
-![Análise e Desenvolvimento de Sistemas - Senac 2019](https://www.liveondemand.com.br/wp-content/uploads/2019/05/logo-SENAC.png)
 # CSharp - Avaliação Blockbuster (Locadora de Filmes)
 
 - Classes
